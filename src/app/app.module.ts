@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import {HttpModule} from '@angular/http';
 
 import { MyApp } from './app.component';
-import { HomePage,ListPage } from '../pages/pages';
+import { HomePage,ListPage,PreresultPage,DetailPage,ResultPage } from '../pages/pages';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,7 +14,10 @@ import { KayamaiProvider } from '../providers/providers';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    PreresultPage,
+    DetailPage,
+    ResultPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,10 @@ import { KayamaiProvider } from '../providers/providers';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    PreresultPage,
+    DetailPage,
+    ResultPage
   ],
   providers: [
     StatusBar,
