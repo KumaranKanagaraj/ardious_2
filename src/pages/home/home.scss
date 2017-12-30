@@ -1,3 +1,92 @@
 page-home {
 
 }
+.toolbar-background {
+  background-color: #434D70;
+  color:#fff;
+}
+[text-color="my-custom-color"] {
+    color: white;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+	color: white;
+}
+.toolbar-title-md{
+	color: white;
+}
+.card-background-page {
+
+  ion-card {
+    position: relative;
+  }
+
+  .card-title {
+    position: absolute;
+    top:70%;
+    font-size: 1.1em;
+    width: 100%;
+    font-weight: 300;
+    color: #fff;
+    bottom:20px;
+    left:10px;
+  }
+
+  .card-subtitle {
+    position: absolute;
+    top: 55%;
+    font-size: 0.9em;
+    color: #fff;
+    left: 10px;
+    font-weight: 100;
+    background: #8BC34A;
+    border-radius: 3px;
+    padding: 5px;
+    height: 18px;
+    text-align: center;
+    line-height: 9px;
+  }
+  .taken,.claps {
+    position: initial;
+  }
+  .taken img {
+    position: absolute;
+    width: 10%;
+    z-index: 3;
+    left: 10px;
+    top: 10px;
+	}
+ .claps img{
+ 	position: absolute;
+    width: 10%;
+    z-index: 3;
+    right: 50px;
+    top: 10px;
+ }
+ .taken p{
+ 	position: absolute;
+    display: block;
+    top: 10px;
+    left: 50px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 100;
+ }
+ .claps p{
+ 	position: absolute;
+    display: block;
+    top: 10px;
+    right:25px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 100;
+ }
+ .taken p span{
+ 	position: absolute;
+ 	display:block;
+ }
+ .claps p span{
+ 	position: absolute;
+ 	display:block;
+ }
+
+}
