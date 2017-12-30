@@ -1,0 +1,8 @@
+{
+  "name": "ardious_2",
+  "app_id": "aa202a20",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
