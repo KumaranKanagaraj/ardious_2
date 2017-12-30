@@ -9,7 +9,7 @@ import { KayamaiProvider } from '../../providers/providers';
 export class HomePage {
 
   constructor(public kayamai: KayamaiProvider,public navCtrl: NavController) {
-     // this.kayamai.getQuestions();
+     
   }
 
 }
