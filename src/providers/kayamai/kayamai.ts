@@ -28,19 +28,5 @@ export class KayamaiProvider {
     return new RequestOptions({ headers: headers });
   }
 
-  private fetchJSON(url:string, options:RequestOptions): Promise<any> {
-    return this.http
-    .get(url, options)
-    .map((response) => {
-     console.log(" From fetchJSON : "+response.json());   //TODO: Remove Console
-      return response.json()
-    })
-    .toPromise();
-  }
-
-  public getQuestions(): any {
-    return this.fetchJSON(Urls.corsUrl + "/" + Urls.getQuestionsURL,this.constructHeaders());
-  }
-
 
 }
