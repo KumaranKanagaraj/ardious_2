@@ -1,17 +1,73 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title>CATEGORIES</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+ <!-- <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
-  </ion-content>
+  </ion-content> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/politics.svg">
+            <h1>POLITICS</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/cinema.svg">
+            <h1>CINEMA</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/travel.svg">
+            <h1>TRAVEL</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/personality.svg">
+            <h1>PERSONALITY</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/media.svg">
+            <h1>MEDIA</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-xl-3>
+        <ion-card>
+          <div class="cat-card">
+            <img src="assets/imgs/style.svg">
+            <h1>STYLE</h1>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-menu>
 

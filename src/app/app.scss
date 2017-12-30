@@ -14,3 +14,23 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-grid.grid {
+    margin-top: 56px;
+}
+.menu-inner{
+	width:100%;
+}
+.cat-card {
+    text-align: center;
+}
+.cat-card img{
+    width:55%;
+    display:block;
+    margin:20px auto;
+}
+.cat-card h1{
+	font-size: 1.3rem;
+	font-weight:400;
+	margin-bottom:10px;
+}
