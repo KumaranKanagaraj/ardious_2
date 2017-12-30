@@ -1,3 +1,24 @@
 page-detail {
 
 }
+.bg-grey{
+	background:#f9f9f9;
+	text-align:center;
+}
+.bg-grey img{
+	display:block;
+	width: 60%;
+    margin: 15px auto;
+}
+.bg-grey label{
+	display: block;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.each-question{
+	    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 26px;
+        padding: 0px 15px;
+}

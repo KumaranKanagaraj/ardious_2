@@ -15,9 +15,6 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-grid.grid {
-    margin-top: 56px;
-}
 .menu-inner{
 	width:100%;
 }
@@ -34,6 +31,6 @@ ion-grid.grid {
 	font-weight:400;
 	margin-bottom:10px;
 }
-ion-grid.grid {
+ion-grid.category-menu.grid{
     margin-top: 275px;
 }
