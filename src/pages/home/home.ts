@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { KayamaiProvider } from '../../providers/providers';
 import { ISlickQuestions,SlickQuestions} from '../../models/models';
 import { DetailPage } from '../pages'
@@ -11,7 +11,9 @@ import { DetailPage } from '../pages'
 export class HomePage {
   allQuestions:ISlickQuestions;
   questions:any[];
-  constructor(public kayamai: KayamaiProvider,public navCtrl: NavController) {
+  constructor(public kayamai: KayamaiProvider,public navCtrl: NavController,
+    public navParams: NavParams) {
+    console.log("HomePage: "+ navParams.get('category')); 
       this.kayamai.getQuestions().then(data => {
         console.log(data);
         var parseData = {};

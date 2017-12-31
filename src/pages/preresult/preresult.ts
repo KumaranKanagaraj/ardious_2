@@ -30,12 +30,10 @@ export class PreresultPage {
   }
 
   viewResultPage(){
-    // this.navCtrl.push(ResultPage, {
-    //    data: "bla bla"
-    // });
     this.navCtrl
     .push(ResultPage, {
-      data: "bla bla"
+      targetQuestion: this.targetQuestion,
+      calculatedAnswer:""
     })
     .then(() => {
       // first we find the index of the current view controller:

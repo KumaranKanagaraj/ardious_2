@@ -80,12 +80,10 @@ export class DetailPage {
   }
 
   updateSlide(e:any,info:ILinkAnswerEntity) {
-    debugger;
     this.optionsChoosed.ChoosenAnswers[this.slides.getActiveIndex()].ChoosenAnswer = info;
-    this.optionsChoosed.ChoosenAnswers[this.slides.getActiveIndex()].IsAnswered = e.checked;
+    //this.optionsChoosed.ChoosenAnswers[this.slides.getActiveIndex()].IsAnswered = e.checked;
     if(this.slides.isEnd()){
       this.reachedEnd();
-      //this.goToSlide(1); 
     }
     else{
       this.goToSlide(this.slides.getActiveIndex()+1); 
@@ -93,10 +91,10 @@ export class DetailPage {
   }
 
   reachedEnd(){
-      for (var index = 0; index < this.optionsChoosed.ChoosenAnswers.length; index++) {
-         if(!this.optionsChoosed.ChoosenAnswers[index].IsAnswered)
-            return "Answer all questions"        
-      }
+      // for (var index = 0; index < this.optionsChoosed.ChoosenAnswers.length; index++) {
+      //    if(!this.optionsChoosed.ChoosenAnswers[index].IsAnswered)
+      //       return "Answer all questions"        
+      // }
       this.navCtrl
       .push(PreresultPage, {
         choosenAnswer: this.optionsChoosed,

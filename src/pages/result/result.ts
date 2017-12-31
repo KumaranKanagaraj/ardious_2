@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IChoosenAnswers, IChoosenAnswersEntity,IChoosenAnswer,ITarget } from '../../models/models';
+import { HomePage } from '../pages'
 
 /**
  * Generated class for the ResultPage page.
@@ -15,7 +17,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ResultPage {
 
+  optionsChoosed : IChoosenAnswers;
+  targetQuestion: ITarget;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.optionsChoosed = navParams.get('calculatedAnswer');
+    this.targetQuestion = navParams.get('targetQuestion');
+    var abc = this.targetQuestion.TargetQuestion
   }
 
   ionViewDidLoad() {

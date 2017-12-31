@@ -10,7 +10,7 @@
   	<button ion-button menuToggle>
       <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
-    <ion-title text-color="my-custom-color"><img src="assets/imgs/bharathi.svg"/><span>How do you design...</span></ion-title>
+    <ion-title text-color="my-custom-color" *ngIf="targetQuestion"><img src="assets/imgs/bharathi.svg" /><span>{{targetQuestion.TargetQuestion}}</span></ion-title>
   </ion-navbar>
 
 </ion-header>
