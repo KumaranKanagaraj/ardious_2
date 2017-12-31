@@ -26,6 +26,8 @@ export class DetailPage {
   linkQuestions: ILinkQuestionsEntity[];
   targetQuestion: ITarget;
   optionsChoosed : IChoosenAnswers;
+
+  itemsSelected : boolean;
   
   constructor(public kayamai: KayamaiProvider,public navCtrl: NavController,public viewCtrl: ViewController,
     public navParams: NavParams ) { 
@@ -78,6 +80,7 @@ export class DetailPage {
   }
 
   updateSlide(e:any,info:ILinkAnswerEntity) {
+    debugger;
     this.optionsChoosed.ChoosenAnswers[this.slides.getActiveIndex()].ChoosenAnswer = info;
     this.optionsChoosed.ChoosenAnswers[this.slides.getActiveIndex()].IsAnswered = e.checked;
     if(this.slides.isEnd()){

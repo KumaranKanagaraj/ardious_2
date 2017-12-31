@@ -27,7 +27,9 @@
 							<ion-card class="bg-grey">
 								<img src="assets/imgs/bells.png">
 								<label>{{options.option}}</label>
-								<ion-radio (ionChange)="updateSlide($event,options)"></ion-radio>
+								<ion-list radio-group [(ngModel)]="itemsSelected">
+										<ion-radio (ionSelect)="updateSlide($event,options)"> </ion-radio>
+								</ion-list>
 							</ion-card>
 						</ion-col>
 					</ion-row>
