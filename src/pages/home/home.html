@@ -9,60 +9,17 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card>
-    <img src="assets/imgs/jay.png"/>
-    <div float-left class="taken">
-      <img src="assets/imgs/people.svg"/>
-      <p float-right>5,425 <span>Taken</span></p>
-    </div>
-    <div float-right class="claps">
-      <img src="assets/imgs/claps.svg"/>
-      <p float-right>425 <span>Claps</span></p>
-    </div>
-    <div class="card-title">Answer this question and get to know who will win on this RK Nagar election</div>
-    <div class="card-subtitle">Politics</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/rajini.png"/>
-    <div float-left class="taken">
-      <img src="assets/imgs/people.svg"/>
-      <p float-right>5,425 <span>Taken</span></p>
-    </div>
-    <div float-right class="claps">
-      <img src="assets/imgs/claps.svg"/>
-      <p float-right>425 <span>Claps</span></p>
-    </div>
-    <div class="card-title">Morbi commodo congue libero sit amet interdum. Donec dolor augue, congue eu vestibulum ut, facilisis sed libero.</div>
-    <div class="card-subtitle">Media</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/rajini.png"/>
-    <div float-left class="taken">
-      <img src="assets/imgs/people.svg"/>
-      <p float-right>5,425 <span>Taken</span></p>
-    </div>
-    <div float-right class="claps">
-      <img src="assets/imgs/claps.svg"/>
-      <p float-right>425 <span>Claps</span></p>
-    </div>
-    <div class="card-title">Sed sagittis non diam non rutrum. Aenean accumsan massa at ligula eleifend, id porta nisi eleifend.</div>
-    <div class="card-subtitle">Cinema</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/jay.png"/>
-    <div float-left class="taken">
-      <img src="assets/imgs/people.svg"/>
-      <p float-right>5,425 <span>Taken</span></p>
-    </div>
-    <div float-right class="claps">
-      <img src="assets/imgs/claps.svg"/>
-      <p float-right>425 <span>Claps</span></p>
-    </div>
-    <div class="card-title">gravida blandit ac, convallis faucibus turpis. Duis egestas massa consectetur,</div>
-    <div class="card-subtitle">Travel</div>
-  </ion-card>
-
+    <ion-card *ngFor="let item of questions" (click)="goTo(item)">
+        <img src="assets/imgs/jay.png"/>
+        <div float-left class="taken">
+          <img src="assets/imgs/people.svg" />
+          <p float-right>5,425 <span>Taken</span></p>
+        </div>
+        <div float-right class="claps">
+          <img src="assets/imgs/claps.svg" />
+          <p float-right>425 <span>Claps</span></p>
+        </div>
+        <div class="card-title">{{item.q_question}}</div>
+        <div class="card-subtitle">{{item.category}}</div>
+      </ion-card>
 </ion-content>

@@ -6,26 +6,25 @@
 -->
 <ion-header no-shadow no-border>
 
-  <ion-navbar>
-  	<button ion-button menuToggle>
+	<ion-navbar>
+		<button ion-button menuToggle>
       <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
-    <ion-title text-color="my-custom-color"><img src="assets/imgs/bharathi.svg"/><span>How do you design...</span></ion-title>
-  </ion-navbar>
+		<ion-title text-color="my-custom-color"><img src="assets/imgs/bharathi.svg" /><span>How do you design...</span></ion-title>
+	</ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
+	<ion-card *ngIf="targetQuestion">
+		<img src="assets/imgs/jay.png" />
+		<div class="card-title">{{targetQuestion.TargetQuestion}}</div>
+	</ion-card>
+
 	<ion-card>
-	    <img src="assets/imgs/jay.png"/>
-	    <div class="card-title">Answer this question and get to know who will win on this RK Nagar election</div>
-	  </ion-card>
-
-	  <ion-card>
-		  <ion-card-content class="clapresult">
-		    <span>To unlock the result page please CLAP</span> <img src="assets/imgs/claps.svg"> 
-		  </ion-card-content>
-	 </ion-card>
-
+		<ion-card-content>
+			<span>To unlock the result page please CLAP</span> <img src="assets/imgs/claps.svg" (click)="viewResultPage()">
+		</ion-card-content>
+	</ion-card>
 </ion-content>

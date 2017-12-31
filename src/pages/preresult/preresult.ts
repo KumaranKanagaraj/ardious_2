@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IChoosenAnswers, IChoosenAnswersEntity,IChoosenAnswer,ITarget } from '../../models/models';
+import { ResultPage } from '../pages'
 
 /**
  * Generated class for the PreresultPage page.
@@ -15,11 +17,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PreresultPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  optionsChoosed : IChoosenAnswers;
+  targetQuestion: ITarget;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    this.optionsChoosed = navParams.get('choosenAnswer');
+    this.targetQuestion = navParams.get('targetQuestion');
+    var abc = this.targetQuestion.TargetQuestion
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreresultPage');
+  }
+
+  viewResultPage(){
+    // this.navCtrl.push(ResultPage, {
+    //    data: "bla bla"
+    // });
+    this.navCtrl
+    .push(ResultPage, {
+      data: "bla bla"
+    })
+    .then(() => {
+      // first we find the index of the current view controller:
+      const index = this.viewCtrl.index;
+      // then we remove it from the navigation stack
+      this.navCtrl.remove(index);
+    });
   }
 
 }

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { Urls } from '../../models/models';
 import 'rxjs/add/operator/map';
 
 /*
@@ -27,5 +29,22 @@ export class KayamaiProvider {
     return new RequestOptions({ headers: headers });
   }
 
+  private fetchJSON(url:string, options:RequestOptions): Promise<any> {
+    return this.http
+    .get(url, options)
+    .map((response) => {
+     console.log(" From fetchJSON : "+response.json());   //TODO: Remove Console
+      return response.json()
+    })
+    .toPromise();
+  }
+
+  public getQuestions(): any {
+    return this.fetchJSON(Urls.corsUrl + "/" + Urls.questionJsonFileURL,this.constructHeaders());
+  }
+
+  public getJsonFile(): any {
+    return this.fetchJSON(Urls.corsUrl + "/" + Urls.jsonFileURL,this.constructHeaders());
+  }
 
 }
