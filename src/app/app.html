@@ -1,9 +1,11 @@
 <ion-menu [content]="content">
   <ion-header no-shadow no-border>
-    <ion-toolbar>
-      <ion-title>CATEGORIES</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-navbar>
+    <ion-title text-color="my-custom-color"><img src="assets/imgs/bharathi.svg"/><span>Categories</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
 
  <ion-content>
     <ion-list>
@@ -11,7 +13,7 @@
         {{p.title}}
       </button>
     </ion-list>
-  </ion-content>
+  
 
   <ion-grid class="category-menu">
     <ion-row>
@@ -59,12 +61,13 @@
         <ion-card no-shadow no-border class="custom-card">
           <div class="cat-card">
             <img src="assets/imgs/style.svg">
-            <h1>STYLE - Tie</h1>
+            <h1>STYLE</h1>
           </div>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+  </ion-content>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

@@ -4,6 +4,14 @@ page-home {
 .toolbar-background {
   background-color: #FFF;
 }
+.toolbar-title img {
+    width: 10%;
+    margin-right: 5px;
+}
+.toolbar-title span{
+        position: absolute;
+    top: 5px;
+}
 /*[text-color="my-custom-color"] {
     color: white;
 }
