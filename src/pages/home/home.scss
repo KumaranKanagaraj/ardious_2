@@ -22,42 +22,43 @@ page-home {
 
   .card-title {
     position: absolute;
-    top:70%;
-    font-size: 1.1em;
+    top: 70%;
+    font-size: .9em;
     width: 100%;
     font-weight: 300;
     color: #fff;
-    bottom:20px;
-    left:10px;
+    bottom: 20px;
+    left: 10px;
+    line-height: 20px;
   }
 
   .card-subtitle {
     position: absolute;
     top: 55%;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: #fff;
     left: 10px;
     font-weight: 100;
     background: #8BC34A;
     border-radius: 3px;
     padding: 5px;
-    height: 18px;
+    height: 14px;
     text-align: center;
-    line-height: 9px;
+    line-height: 6px;
   }
   .taken,.claps {
     position: initial;
   }
   .taken img {
     position: absolute;
-    width: 10%;
+    width: 7%;
     z-index: 3;
     left: 10px;
     top: 10px;
 	}
  .claps img{
  	position: absolute;
-    width: 10%;
+    width: 7%;
     z-index: 3;
     right: 50px;
     top: 10px;
@@ -65,18 +66,18 @@ page-home {
  .taken p{
  	position: absolute;
     display: block;
-    top: 10px;
-    left: 50px;
-    font-size: 12px;
+    top: 8px;
+    left: 43px;
+    font-size: 10px;
     color: #fff;
     font-weight: 100;
  }
  .claps p{
  	position: absolute;
     display: block;
-    top: 10px;
-    right:25px;
-    font-size: 12px;
+    top: 8px;
+    right: 19px;
+    font-size: 10px;
     color: #fff;
     font-weight: 100;
  }
